@@ -19,7 +19,7 @@ raw_valid=$raw_datadir/valid
 raw_test=$raw_datadir/test
 target=summary
 
-modeldir=cnndm_model_dir
+modeldir=nyt_model_dir
 mkdir $modeldir
 
 cp $0 $modeldir

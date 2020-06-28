@@ -29,7 +29,7 @@ case $dataset in
     ;;
 esac
 
-modeldir=released_model/cnndm_model/85_docker
+modeldir=released_model/cnndm_model/85
 mkdir $modeldir
 
 pretrained_model=released_model/cnndm_model/checkpoint85.pt

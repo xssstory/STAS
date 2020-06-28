@@ -6,7 +6,7 @@ temperature=1,1.1,1.2,1.3
 multi_graph=False
 no_recovery=False
 topk=3
-modeldir=released_model/nyt_model/65_docker
+modeldir=released_model/nyt_model/65
 pretrained_model=released_model/nyt_model/checkpoint65.pt
 
 DATA_DIR=data

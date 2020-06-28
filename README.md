@@ -25,18 +25,18 @@ sudo cpan install XML::DOM
 You can download CNN/DM and NYT datasets from <a link here> and  unzip the file, these files are organized as follows: 
 
 ```css
-data
-    ├── cnndm
-				├── cnndm_yangliu_label_bin
-						└── ...
-				├── training.article
-				├── ...
-    	  └── test.summary
-    └── nyt
+data 
+    ├── cnndm 
+        ├── cnndm_yangliu_label_bin 
+            └── ... 
+        ├── training.article 
+        ├── ... 
+        └── test.summary 
+    └── nyt 
         ├── roberta_base_orig_bin
-						└── ...
+            └── ...
         ├── train.article
-				├── ...
+        ├── ...
         └── test.article
 ```
 
@@ -51,21 +51,21 @@ You can download our released model from <a link here>, the files are organized 
 ├── README.md
 └── released_model
     ├── cnndm_model
-				├── checkpoint85.pt
-				├── ensemble_result
-						├── pacsum
-								├── 61.text.txt
-								└── 61.valid.txt
-						└──	stas
-								├── 13.text.txt
-								└── 13.text.txt
+        ├── checkpoint85.pt
+        └── ensemble_result
+            ├── pacsum
+                ├── 61.text.txt
+                └── 61.valid.txt
+            └── stas
+                ├── 13.text.txt
+                └── 13.text.txt
     └── nyt_model
         ├── checkpoint65.pt
-				├── ensemble_result
-						├── pacsum
-								└── ...
-						└──	stas
-								└── ...
+        └── ensemble_result
+            ├── pacsum
+                └── ...
+            └── stas
+                └── ...
 ```
 We provide the sentence scores given by STAT and PASUM in the **ensemble_result**, you can combine the scores following  [Evaluation](#Evaluation) 3.
 
