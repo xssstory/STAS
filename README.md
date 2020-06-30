@@ -1,3 +1,6 @@
+
+STAS stands for **S**entence-level **T**ransformer based **A**ttentive **S**ummarization.
+
 ### Installation
 
 You need to install python3 and following libararies
