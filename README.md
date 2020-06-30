@@ -20,6 +20,8 @@ sudo cpan install XML::DOM
 
 ```
 
+We also provide the `Dockerfile` we used to train and evaluate the model.
+
 ### Dataset
 
 You can download CNN/DM and NYT datasets from <a link here> and  unzip the file, these files are organized as follows: 
@@ -58,7 +60,7 @@ You can download our released model from <a link here>, the files are organized 
                 └── 61.valid.txt
             └── stas
                 ├── 13.text.txt
-                └── 13.text.txt
+                └── 13.valid.txt
     └── nyt_model
         ├── checkpoint65.pt
         └── ensemble_result
