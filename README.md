@@ -49,7 +49,7 @@ Where the `cnndm_yangliu_label_bin` and `roberta_base_orig_bin` are in binary fo
 
 ### Trained models
 
-You can download our released models from [here](https://xingxingzhang.blob.core.windows.net/share/stats/model.zip ), the files are organized as follows:
+You can download our released models from [here](https://xingxingzhang.blob.core.windows.net/share/stas/model.zip), the files are organized as follows:
 
 ```css
 .
