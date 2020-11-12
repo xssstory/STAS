@@ -1,5 +1,5 @@
 
-STAS stands for **S**entence-level **T**ransformer based **A**ttentive **S**ummarization.
+This is an implementation of the STAS (**S**entence-level **T**ransformer based **A**ttentive **S**ummarization) model described in  [Unsupervised Extractive Summarization by Pre-training Hierarchical Transformers](https://www.aclweb.org/anthology/2020.findings-emnlp.161/)
 
 ### Installation
 
@@ -49,7 +49,7 @@ Where the `cnndm_yangliu_label_bin` and `roberta_base_orig_bin` are in binary fo
 
 ### Trained models
 
-You can download our released model from <a link here>, the files are organized as follows:
+You can download our released models from [here](https://xingxingzhang.blob.core.windows.net/share/stats/model.zip ), the files are organized as follows:
 
 ```css
 .
@@ -113,5 +113,23 @@ We also provide the steps to evaluate the models.
 
    The generated summaries and ROGUE socres will be stored in the `released_model/cnndm_model/ensemble_result/ensemble/test` and `released_model/cnndm_model/ensemble_result/ensemble/valid` .
 
+### Citation
+```
+@inproceedings{xu-etal-2020-unsupervised,
+    title = "Unsupervised Extractive Summarization by Pre-training Hierarchical Transformers",
+    author = "Xu, Shusheng  and
+      Zhang, Xingxing  and
+      Wu, Yi  and
+      Wei, Furu  and
+      Zhou, Ming",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.findings-emnlp.161",
+    pages = "1784--1795",
+}
+```
 
 
