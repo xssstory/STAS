@@ -25,27 +25,6 @@ sudo cpan install XML::DOM
 
 We also provide the `Dockerfile` we used to train and evaluate the model.
 
-### Dataset
-
-You can download CNN/DM and NYT datasets from <a link here> and  unzip the file, these files are organized as follows: 
-
-```css
-data 
-    ├── cnndm 
-        ├── cnndm_yangliu_label_bin 
-            └── ... 
-        ├── training.article 
-        ├── ... 
-        └── test.summary 
-    └── nyt 
-        ├── roberta_base_orig_bin
-            └── ...
-        ├── train.article
-        ├── ...
-        └── test.article
-```
-
-Where the `cnndm_yangliu_label_bin` and `roberta_base_orig_bin` are in binary format and are used for training, other files like `*.article` are in text format.
 
 ### Trained models
 
