@@ -174,7 +174,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--raw-valid', default='data/cnndm/validation.article')
+    parser.add_argument('--raw-valid', default='data/cnndm/valid.article')
     parser.add_argument('--raw-test', default='data/cnndm/test.article')
     
     parser.add_argument('--stas-dir', default='released_model/cnndm_model/ensemble_result/stas/')

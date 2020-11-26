@@ -13,17 +13,17 @@ DATA_DIR=data
 target=summary
 case $dataset in
     "nyt")  
-    datadir=$DATA_DIR/nyt/roberta_base_orig_bin
+    datadir=$DATA_DIR/nyt/roberta_base_bin
     raw_datadir=$DATA_DIR/nyt
     raw_valid=$raw_datadir/valid
     raw_test=$raw_datadir/test
     ;;
     "cnndm")
-    datadir=$DATA_DIR/cnndm/cnndm_yangliu_label_bin
+    datadir=$DATA_DIR/cnndm/roberta_base_bin
     raw_datadir=$DATA_DIR/cnndm
-    raw_valid=$raw_datadir/validation
+    raw_valid=$raw_datadir/valid
     raw_test=$raw_datadir/test
-    target=label
+    target=summary
     ;;
     *) echo "dataset does not support $dataset yet !"
     ;;

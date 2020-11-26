@@ -13,7 +13,7 @@ mask_weight=0.5
 perm_weight=0.5
 
 DATA_DIR=data
-datadir=$DATA_DIR/nyt/roberta_base_orig_bin
+datadir=$DATA_DIR/nyt/roberta_base_bin
 raw_datadir=$DATA_DIR/nyt
 raw_valid=$raw_datadir/valid
 raw_test=$raw_datadir/test

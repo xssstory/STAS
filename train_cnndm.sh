@@ -8,11 +8,11 @@ mask_weight=0.5
 perm_weight=0.5
 
 DATA_DIR=data
-datadir=$DATA_DIR/cnndm/cnndm_yangliu_label_bin
+datadir=$DATA_DIR/cnndm/roberta_base_bin
 raw_datadir=$DATA_DIR/cnndm
-raw_valid=$raw_datadir/validation
+raw_valid=$raw_datadir/valid
 raw_test=$raw_datadir/test
-target=label
+target=summary
 
 modeldir=cnndm_model_dir
 mkdir $modeldir

@@ -131,3 +131,6 @@ data-bin/
 
 #
 __tmp__rouge*
+
+data/
+released_model

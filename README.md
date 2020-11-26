@@ -53,6 +53,13 @@ You can download our released models from [here](https://xingxingzhang.blob.core
 ```
 We provide the sentence scores given by STAT and PASUM in the **ensemble_result**, you can combine the scores following  [Evaluation](#Evaluation) 3.
 
+### data preprocess
+You should split your data into train/validation/test subsets and get 6 files like train.article, train.summary, valid.article, valid.summary, test.article and test.summary,
+and make sure that each line has one article/summary, the sentence in the article/summary is splited by "<S_SEP>". (we only use summaries for evaluation and test)
+
+Then run the get-data-bpe.sh (modify the file path in the script accroding to you situation) and you will get a file folder for training and evaluating our model.
+
+
 ### Training
 
 We provide the scripts for training on the CNN/DM and NYT datasets, We trained our models with 4 Nvidia Tesla V100GPUs and employed gradient accumulation technique.
@@ -88,6 +95,9 @@ We also provide the steps to evaluate the models.
    ```
    python ensemble.py
    python evaluate_ensemble.py
+   # for nyt
+   python ensemble.py --raw-valid=data/nyt/valid.article --raw-test=data/nyt/test.article --stas-dir=released_model/nyt_model/ensemble_result/stas/ --pacsum-dir=released_model/nyt_model/ensemble_result/pacsum/ --outdir=released_model/nyt_model/ensemble_result/ensenble/ --rerank=False
+
    ```
 
    The generated summaries and ROGUE socres will be stored in the `released_model/cnndm_model/ensemble_result/ensemble/test` and `released_model/cnndm_model/ensemble_result/ensemble/valid` .

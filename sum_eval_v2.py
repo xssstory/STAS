@@ -128,31 +128,6 @@ def evaluate_extractive(result_file, summary_file, add_full_stop,
 
     return output_dict, output
 
-
-class MultiProcSumEval(object):
-
-    def __init__(self, ncpu):
-        self.pool = multiprocessing.Pool(ncpu)
-        # self.pool = multiprocessing.pool.ThreadPool(ncpu)
-        self.ncpu = ncpu
-
-    def add_eval_job(self, summary_file, entity_map_file, result_file, out_rouge_file, add_full_stop,
-                      cmd='-a -c 95 -m -n 4 -w 1.2', multi_ref=False, trigram_block=False):
-        outfile = out_rouge_file
-
-        if self.ncpu == 1:
-            evaluate_extractive(result_file, summary_file, add_full_stop,
-                                entity_map_file, outfile, cmd, multi_ref, trigram_block)
-        else:
-            self.pool.apply_async(evaluate_extractive, args=(
-                                  result_file, summary_file, add_full_stop,
-                                  entity_map_file, outfile, cmd, multi_ref, trigram_block))
-
-    def join(self):
-        self.pool.close()
-        self.pool.join()
-
-
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--ncpu', type=int, default=1)
@@ -167,11 +142,9 @@ def get_args():
 
 if __name__ == "__main__":
     args = get_args()
-    eval_pool = MultiProcSumEval(args.ncpu)
 
-    eval_pool.add_eval_job(
+    evaluate_extractive(
         summary_file=args.gold_summary, entity_map_file=args.entity_map, result_file=args.gene_summary,
         cmd='-a -c 95 -m -n 2 -w 1.2', out_rouge_file=args.out_rouge_file, add_full_stop=args.add_full_stop
     )
-    
     
