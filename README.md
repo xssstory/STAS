@@ -38,10 +38,10 @@ You can download our released models from [here](https://xingxingzhang.blob.core
         ├── checkpoint85.pt
         └── ensemble_result
             ├── pacsum
-                ├── 61.text.txt
+                ├── 61.test.txt
                 └── 61.valid.txt
             └── stas
-                ├── 13.text.txt
+                ├── 13.test.txt
                 └── 13.valid.txt
     └── nyt_model
         ├── checkpoint65.pt
@@ -55,7 +55,10 @@ We provide the sentence scores given by STAT and PASUM in the **ensemble_result*
 
 ### data preprocess
 You should split your data into train/validation/test subsets and get 6 files like train.article, train.summary, valid.article, valid.summary, test.article and test.summary,
-and make sure that each line has one article/summary, the sentence in the article/summary is splited by "<S_SEP>". (we only use summaries for evaluation and test)
+and make sure that each line has one article/summary, the sentence in the article/summary is splited by "<S_SEP>". (we only use summaries for evaluation and test). Here is an example:
+```
+Apple 's first generation iPad launched on 3 April 2010 <S_SEP> In its five years on the market , 225 million devices have been sold <S_SEP> But larger smartphones and smart watches may herald its end <S_SEP> Sales for the iPad dropped 18 per cent in the final quarter of 2014
+```
 
 Then run the get-data-bpe.sh (modify the file path in the script accroding to you situation) and you will get a file folder for training and evaluating our model.
 
